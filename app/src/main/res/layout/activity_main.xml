@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="@string/add_groceries"
+            android:text="@string/app_name_heading"
             android:textSize="24sp"
             android:textAlignment="center"
             android:textColor="@android:color/white"
@@ -29,13 +29,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/item">
-
+        android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/itemEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="Enter item name here" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
