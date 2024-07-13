@@ -1,0 +1,122 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/purple_500">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/add_groceries"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            style="@style/TextAppearance.MaterialComponents.Headline5"/>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/itemEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        style="@style/TextAppearance.MaterialComponents.Body1"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/quantity">
+
+        <Spinner
+            android:id="@+id/quantitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addItemButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/totalItemsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_items_0"
+        android:paddingTop="16dp"
+        style="@style/TextAppearance.MaterialComponents.Body1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/purple_100">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/item"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Body1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/quantity"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Body1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/action"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Body1"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/groceryListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="16dp"/>
+</LinearLayout>
