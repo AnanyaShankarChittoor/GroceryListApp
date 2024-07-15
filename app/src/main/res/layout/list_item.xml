@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/item_name"
+        android:textColor="@color/black"
         android:textSize="18sp"
         style="@style/TextAppearance.MaterialComponents.Body1"/>
 
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/quantity"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textAlignment="center"
         style="@style/TextAppearance.MaterialComponents.Body1"/>
